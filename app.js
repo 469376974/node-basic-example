@@ -15,7 +15,7 @@ mongoose.connect('mongodb://localhost:27017/imooc');
 app.set('views', './views/pages');
 app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(serveStatic('bower_components'));
+app.use(serveStatic('public'));
 app.locals.moment = require('moment');
 app.listen(port);
 
@@ -62,9 +62,9 @@ app.get('/admin/movie', function (req, res) {
 
 //admin update movie
 app.get('/admin/update/:id', function (req, res) {
-    var id =req.params.id;
+    var id = req.params.id;
 
-    if(id) {
+    if (id) {
         Movie.findById(id, function (err, movie) {
             res.render('admin', {
                 title: 'imooc 后台更新页',
@@ -172,4 +172,21 @@ app.get('/admin/list', function (req, res) {
             movies: movies
         });
     });
+});
+
+//list delete movie
+app.delete('/admin/list', function (req, res) {
+    var id = req.query.id;
+
+    if (id) {
+        Movie.remove({_id: id}, function (err, movie) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.json({success: 1});
+            }
+
+        })
+    }
 });

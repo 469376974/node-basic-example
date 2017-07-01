@@ -1,0 +1,21 @@
+{
+  "name": "imooc",
+  "version": "1.0.0",
+  "description": "movieExample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dengcong",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "jade": "^1.11.0",
+    "moment": "^2.18.1",
+    "mongoose": "^4.10.4",
+    "serve-static": "^1.12.3",
+    "underscore": "^1.8.3"
+  }
+}

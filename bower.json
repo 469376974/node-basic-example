@@ -1,0 +1,18 @@
+{
+  "name": "imooc",
+  "description": "imooc movie",
+  "main": "index.js",
+  "authors": [
+    "dengcong"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/469376974/node-basic-example",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
